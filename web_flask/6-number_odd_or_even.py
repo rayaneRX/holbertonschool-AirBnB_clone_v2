@@ -41,9 +41,11 @@ def number_template(n):
 @app.route("/number_odd_or_even/<int:n>")
 def number_odd_or_even(n):
     if n % 2 == 0:
-        return render_template("6-number_odd_or_even.html", n=n, odd_or_even="even")
+        return render_template("6-number_odd_or_even.html",
+                               n=n, odd_or_even="even")
     else:
-        return render_template("6-number_odd_or_even.html", n=n, odd_or_even="odd")
+        return render_template("6-number_odd_or_even.html",
+                               n=n, odd_or_even="odd")
 
 
 if __name__ == '__main__':
