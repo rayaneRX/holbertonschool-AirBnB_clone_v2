@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Flask hello world"""
+"""Flask"""
 
 from flask import Flask
 
@@ -18,7 +18,7 @@ def hbnb():
 
 
 @app.route("/c/<text>")
-def C_text(text):
+def text(text):
     return "C {}".format(text.replace("_", " "))
 
 
