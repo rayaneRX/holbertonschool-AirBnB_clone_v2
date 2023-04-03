@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Flask hello world"""
+"""Flask"""
 
 from flask import Flask
 
@@ -22,18 +22,14 @@ def C_text(text):
     return "C {}".format(text.replace("_", " "))
 
 
+@app.route('/python/', defaults={'text': 'is cool'})
 @app.route("/python/<text>")
 def python_text(text):
     return "Python {}".format(text.replace("_", " "))
 
 
-@app.route("/python/")
-def python_notext():
-    return "Python {no_text}".format(no_text="is cool")
-
-
 @app.route("/number/<int:n>")
-def is_number(n):
+def number(n):
     return ("{} is a number".format(n))
 
 
