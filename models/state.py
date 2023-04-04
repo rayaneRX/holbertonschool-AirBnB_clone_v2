@@ -20,7 +20,7 @@ class State(BaseModel, Base):
 
         @property
         def cities(self):
-            """Getter for cities when not using DBStorage engine."""
+            """Getter for cities when not using DBStorage"""
             cities_list = []
             for city in models.storage.all(City).values():
                 if self.id == city.state_id:
