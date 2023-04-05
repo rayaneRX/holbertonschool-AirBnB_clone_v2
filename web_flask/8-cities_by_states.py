@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 """Flask"""
 
-from flask import Flask
-from markupsafe import escape
-from flask import render_template
+from flask import Flask, render_template
 from models import storage
 from models.state import State
 from models.city import City
