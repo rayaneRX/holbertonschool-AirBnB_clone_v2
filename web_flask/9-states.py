@@ -21,7 +21,7 @@ def states_list(id):
 
 @app.teardown_appcontext
 def close_db(exception):
-   storage.close()
+    storage.close()
 
 
 if __name__ == '__main__':
