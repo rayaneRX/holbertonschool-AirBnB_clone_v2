@@ -9,13 +9,13 @@ from models.city import City
 app = Flask(__name__)
 
 
-@app.route("/states", defaults={'id' : None}, strict_slashes=False)
+@app.route("/states", defaults={'id': None}, strict_slashes=False)
 @app.route("/states/<id>", strict_slashes=False)
 def all_states(id):
     states = storage.all(State)
     if id:
         id = 'State.' + id
-    return render_template("9-states.html", states=states)
+    return render_template("9-states.html", states=states, id=id)
 
 
 @app.teardown_appcontext
